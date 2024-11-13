@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space-Themed Data Science Portfolio</title>
+    <style>
+        /* Background and Star Animation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d2b;
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            background: radial-gradient(circle, #0d0d2b, #05050f);
+        }
+
+        /* Stars in background */
+        .stars {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow: 
+                800px 400px #ffffff, 500px 200px #d1d1ff,
+                1500px 600px #7f7fff, 1800px 1500px #7f7fff,
+                200px 900px #ffffff, 1200px 100px #d1d1ff;
+            animation: twinkling 2s infinite alternate;
+        }
+
+        /* Star twinkling animation */
+        @keyframes twinkling {
+            0% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.5; }
+        }
+
+        header {
+            text-align: center;
+            padding: 1em 0;
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #4CAF50;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+        }
+
+        h1 {
+            color: #cce7ff;
+            font-size: 2.5em;
+        }
+
+        nav a {
+            color: #cce7ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Sections Styling */
+        section {
+            max-width: 800px;
+            margin: 3em auto;
+            padding: 1em;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        h2 {
+            color: #ffd700;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        #profile-picture {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ffd700;
+        }
+
+        .education-entry, .skill, .project {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 1em;
+            margin: 1em 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-entry:hover, .skill:hover, .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: rgba(0, 0, 0, 0.8);
+            color: #cce7ff;
+        }
+
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div> <!-- Star layer background -->
+    <header>
+        <h1>My Space-Themed Data Science Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="profile-picture">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a data science student exploring the universe of data, from machine learning to data visualization. I love working on projects that turn complex data into stellar insights!</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-entry">
+            <h3>Bachelor's in Data Science</h3>
+            <p>University of Data Science - Class of 2023</p>
+        </div>
+        <div class="education-entry">
+            <h3>Certification in Machine Learning</h3>
+            <p>Online Learning Platform - 2022</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill">
+            <h3>Programming Languages</h3>
+            <p>Python, R, SQL, JavaScript</p>
+        </div>
+        <div class="skill">
+            <h3>Data Analysis & Machine Learning</h3>
+            <p>Scikit-Learn, TensorFlow, Pandas, NumPy, Matplotlib</p>
+        </div>
+        <div class="skill">
+            <h3>Tools & Technologies</h3>
+            <p>Git, GitHub, Docker, Tableau, Jupyter Notebook</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Sentiment Analysis</h3>
+            <p>A project that uses machine learning to explore public sentiment on social media topics.</p>
+            <a href="https://github.com/username/sentiment-analysis" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Customer Segmentation</h3>
+            <p>A clustering project to group customers by purchasing behaviors.</p>
+            <a href="https://github.com/username/customer-segmentation" target="_blank">View on GitHub</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+    </section>
+
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/username" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // JavaScript for scroll-based animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+
+            function revealOnScroll() {
+                const viewportHeight = window.innerHeight;
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < viewportHeight - 100) {
+                        section.classList.add("fade-in");
+                    }
+                });
+            }
+
+            // Initial check
+            revealOnScroll();
+
+            // Trigger on scroll
+            window.addEventListener("scroll", revealOnScroll);
+        });
+    </script>
+</body>
+</html>
